@@ -1,0 +1,45 @@
+<html>
+    <head>
+        <title>DEMO29</title>
+        <script>
+          // if we pass a  function as parameter to another function then it is called callback
+            //map object - for each method, if we take 2 parameters then 1st one is value and 2nd one key, if we take only one then it is taken as value
+            const mapobj1 = new Map()
+            mapobj1.set(1,0);
+            mapobj1.set("id",1234)
+            mapobj1.set("name","klu")//numbers in double quotes is also taken as number not a string
+            document.writeln("Map Object 1 Size="+mapobj1.size+"</br>")
+            
+            document.writeln("<u>Map Object 1 Values</u></br>")
+
+           mapobj1.forEach((v) => document.writeln(v))
+          document.writeln("</br>")
+           document.writeln("<u>Map Object 1 keys and avlues</u></br>")
+           mapobj1.forEach((v,k)=>{
+            document.writeln(k+":"+v)
+           } )
+           document.writeln("</br>")
+
+           const mapobj2 = new Map([["id",101], ["name","klu"],]) //constructor
+           document.writeln("Map Object 2 Size="+mapobj2.size+"</br>")
+            
+            document.writeln("<u>Map Object 2 Values</u></br>")
+
+           mapobj2.forEach((v) => document.writeln(v))
+           document.writeln("</br>")
+
+           document.writeln("<u>Map Object 2 keys and avlues</u></br>")
+           
+           const display =  (v,k)=>{
+            document.writeln(k+":"+v)
+           }
+           mapobj2.forEach(display) // where display is callback
+           
+
+    
+        </script>
+    </head>
+    <body>
+   
+    </body>
+</html>

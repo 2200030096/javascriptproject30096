@@ -1,0 +1,34 @@
+<html>
+    <head>
+        <title>DEMO27</title>
+        <script>
+           //declaring an array using new key word,(array object)
+           //it is a type of constructor with no arguemnts
+           let arr = new Array() // size is optional
+
+           const n = parseInt(prompt("Enter Array Size",1))
+           alert("Reading array elements :")
+           for(let i=0;i<n;i++)
+           {
+                arr[i]=parseInt(prompt("Enter element "+(i+1)))
+           }
+            document.writeln("Array Elements</br>")
+            for(let element of arr)
+            {
+                document.writeln(element)
+            }
+            const course = new Array("aws","mswd","psfd") // constructor :providing values while craeting objects
+            document.writeln("course array lenght:"+course.length+"</br>")
+            document.writeln("Course Type :"+typeof course+"</br>")
+            document.writeln("Course Array Elemnts</u></br>")
+            for(let c of course)
+            {
+                document.writeln(c)
+            }          
+
+        </script>
+    </head>
+    <body>
+       
+    </body>
+</html>

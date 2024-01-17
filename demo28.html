@@ -1,0 +1,63 @@
+<html>
+    <head>
+        <title>DEMO28</title>
+        <script>
+            //map object - collection of objects with key value pair,it is an itarable object
+            const demomap = new Map()
+            //set : key and value both can be of any type unlike arrays where key is always a string
+            demomap.set("id",123)
+            demomap.set("name","klu")
+            demomap.set("age",40.5)
+            demomap.set("status",false)
+            demomap.set("name","klef") //duplicate key - klu will be upadted as klef
+
+            document.writeln("Map size ="+demomap.size+"</br>")
+            document.writeln("Map type="+ typeof demomap+"</br>")
+
+
+            document.writeln(demomap.get("id")+"</br>")
+            document.writeln(demomap.get("location")+"</br>")
+            document.writeln(demomap.has("id")+"</br>")
+            document.writeln(demomap.has("location")+"</br>")
+            document.writeln("Deletion:"+demomap.delete("status")+"</br>")//it will delete and return true
+            document.writeln("Map size="+demomap.size+"</br>")
+
+            document.writeln("<u>Display map keys</u></br>")
+            for(let k of demomap.keys())
+            {
+                document.writeln(k)
+            }
+            document.writeln("</br>")
+
+
+            document.writeln("<u>Display map values</u></br>")
+            for(let v of demomap.values())
+            {
+                document.writeln(v)
+            }
+            document.writeln("</br>")
+
+
+            document.writeln("<u>Display map values based on keys</u></br>")
+            for(let k of demomap.keys())
+            {
+                document.writeln(demomap.get(k))
+            }
+            document.writeln("</br>")
+
+
+            document.writeln("<u>Display map values keys and values</u></br>")//entries will give key,value
+            for(const [k,v] of demomap.entries())
+            {
+                document.writeln(k+":"+v)
+            }
+            document.writeln("</br>")
+
+            demomap.clear()
+            document.writeln("map size="+demomap.size+"</br>")
+        </script>
+    </head>
+    <body>
+    
+    </body>
+</html>
